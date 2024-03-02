@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:diagonal="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="sans-serif"
+                android:text="ChatIn"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_24font_mdp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/profileImage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/profileImage" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileImage"
+                android:layout_width="@dimen/_40mdp"
+                android:layout_height="@dimen/_40mdp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:padding="4dp"
+                android:src="@drawable/original"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/statusCircle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/orange_circle"
+                app:layout_constraintBottom_toBottomOf="@id/profileImage"
+                app:layout_constraintEnd_toEndOf="@id/profileImage"
+                app:layout_constraintStart_toStartOf="@id/profileImage"
+                app:layout_constraintTop_toTopOf="@id/profileImage" />
+
+            <View
+                android:id="@+id/view6"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/derkGrey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profileImage" />
+
+<!--            <HorizontalScrollView-->
+<!--                android:id="@+id/horizontal"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:fillViewport="true"-->
+<!--                android:isScrollContainer="false"-->
+<!--                android:scrollbars="none"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/view6">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--&lt;!&ndash;                    <androidx.constraintlayout.widget.ConstraintLayout&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_weight="1">&ndash;&gt;-->
+
+<!--&lt;!&ndash;                        <com.makeramen.roundedimageview.RoundedImageView&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:id="@+id/storyImg"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_width="@dimen/_130mdp"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_height="@dimen/_85mdp"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_marginStart="16dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:alpha="0.9"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:scaleType="centerCrop"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:src="@drawable/deaf"&ndash;&gt;-->
+<!--&lt;!&ndash;                            app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                            app:layout_constraintTop_toTopOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                            app:riv_corner_radius="10dip" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;                        <View&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:id="@+id/view4"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_width="0dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_height="0dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:background="@drawable/black_shade"&ndash;&gt;-->
+<!--&lt;!&ndash;                            app:layout_constraintBottom_toBottomOf="@+id/storyImg"&ndash;&gt;-->
+<!--&lt;!&ndash;                            app:layout_constraintEnd_toEndOf="@+id/storyImg"&ndash;&gt;-->
+<!--&lt;!&ndash;                            app:layout_constraintStart_toStartOf="@+id/storyImg"&ndash;&gt;-->
+<!--&lt;!&ndash;                            app:layout_constraintTop_toTopOf="@+id/storyImg" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;                        <View&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:id="@+id/view8"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_width="0dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_height="0dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_marginTop="4dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_marginEnd="4dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_marginBottom="4dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:background="@drawable/circle"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:backgroundTint="@color/white"&ndash;&gt;-->
+<!--&lt;!&ndash;                            app:layout_constraintBottom_toBottomOf="@+id/addStory"&ndash;&gt;-->
+<!--&lt;!&ndash;                            app:layout_constraintEnd_toEndOf="@+id/addStory"&ndash;&gt;-->
+<!--&lt;!&ndash;                            app:layout_constraintStart_toStartOf="@+id/addStory"&ndash;&gt;-->
+<!--&lt;!&ndash;                            app:layout_constraintTop_toTopOf="@+id/addStory" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;                        <ImageView&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:id="@+id/addStory"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_width="@dimen/_30mdp"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_height="@dimen/_30mdp"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:src="@drawable/ic_plus"&ndash;&gt;-->
+<!--&lt;!&ndash;                            app:layout_constraintBottom_toBottomOf="@+id/storyImg"&ndash;&gt;-->
+<!--&lt;!&ndash;                            app:layout_constraintEnd_toEndOf="@+id/storyImg"&ndash;&gt;-->
+<!--&lt;!&ndash;                            app:layout_constraintStart_toStartOf="@+id/storyImg"&ndash;&gt;-->
+<!--&lt;!&ndash;                            app:layout_constraintTop_toTopOf="@+id/storyImg"&ndash;&gt;-->
+<!--&lt;!&ndash;                            app:layout_constraintVertical_bias="0.3" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;                        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:id="@+id/textView11"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:fontFamily="@font/baloo"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:text="Create a story"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:textColor="@color/white"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:textSize="18sp"&ndash;&gt;-->
+<!--&lt;!&ndash;                            app:layout_constraintEnd_toEndOf="@+id/addStory"&ndash;&gt;-->
+<!--&lt;!&ndash;                            app:layout_constraintStart_toStartOf="@+id/addStory"&ndash;&gt;-->
+<!--&lt;!&ndash;                            app:layout_constraintTop_toBottomOf="@+id/addStory" />&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;                    </androidx.constraintlayout.widget.ConstraintLayout>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                    <androidx.recyclerview.widget.RecyclerView&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:id="@+id/storyRV"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_marginStart="16dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_weight="1">&ndash;&gt;-->
+
+<!--&lt;!&ndash;                    </androidx.recyclerview.widget.RecyclerView>&ndash;&gt;-->
+
+<!--                </LinearLayout>-->
+<!--            </HorizontalScrollView>-->
+
+
+<!--            <View-->
+<!--                android:id="@+id/view7"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:background="@color/derkGrey"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/horizontal"-->
+<!--                diagonal:layout_constraintEnd_toEndOf="parent"-->
+<!--                diagonal:layout_constraintHorizontal_bias="0.0"-->
+<!--                diagonal:layout_constraintStart_toStartOf="parent" />-->
+
+            <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                android:id="@+id/dashboardRV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view6"
+                app:shimmer_demo_child_count="10"
+                app:shimmer_demo_layout="@layout/demo_post"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
